@@ -1,4 +1,4 @@
-package com.bteam.test;
+package com.bteam.test.repository;
 
 import java.util.Optional;
 

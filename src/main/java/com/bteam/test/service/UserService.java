@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.bteam.test.UserRepository;
+import com.bteam.test.repository.UserRepository;
 import com.bteam.test.model.User;
 import com.bteam.test.model.UserDto;
 import com.bteam.test.model.UserRole;
@@ -37,8 +37,6 @@ public class UserService {
 
 		// 사용자 ROLE 확인
 		
-		
-
 		User user = new User(userid,password,role);
 		System.out.print(userid+password+role);
 		userRepository.save(user);
