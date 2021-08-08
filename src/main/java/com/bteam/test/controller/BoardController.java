@@ -17,4 +17,14 @@ public class BoardController {
 		return"board/board";
 	}
 	
+	@GetMapping("/board/info")
+	public String boardInfo(){
+		return"board/boardInfo";
+	}
+	
+	@GetMapping("/board/write")
+	public String boardWrite() {
+		return "board/boardWrite";
+	}
+	
 }
