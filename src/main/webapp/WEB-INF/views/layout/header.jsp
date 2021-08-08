@@ -40,19 +40,18 @@
 					</div>
 					<!-- Menu -->
 					<ul class="navbar__menu">
-						<li class="dropdown"><a>메인</a></li>
-						<li class="dropdown"><a>여행 게시판</a></li>
+						<li class="dropdown"><a href="/">메인</a></li>
+						<li class="dropdown"><a href="/board">여행 게시판</a></li>
 						<li class="dropdown"><a>여행정보</a></li>
-						<li class="dropdown"><a>여행정보</a></li>
+						<li class="dropdown"><a>지도 표기</a></li>
 						<li class="dropdown"><a>Q&A</a></li>
 					</ul>
 
 					<!-- Icons -->
 					<ul class="navbar__icons">
 						<li class="dropdown"><a href="/auth/loginForm">로그인</a></li>
-						<li class="dropdown"><a href="/auth/joinForm">로그아웃</a></li>
 						<li class="dropdown"><a>마이페이지</a></li>
-						<li class="dropdown"><a>전체사용자정보</a></li>
+<!-- 						<li class="dropdown"><a>전체사용자정보</a></li> -->
 					</ul>
 					<!-- Toggle button -->
 					<a href="#" class="navbar__toggleBtn"> <span style="color: orange"><i class="fas fa-bars"></i></span>
