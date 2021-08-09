@@ -9,9 +9,8 @@
 		<div class="login-id-label">비밀번호</div>
 		<input type="password" name="password" class="login-input-box" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*()_-+=[]{}~?:;`|/]).{6,50}$" placeholder="PW 입력">
 	</form>
-	<button id="login-id-submit" onclick="location.href='../html/board.html'">로그인</button>
-	<button id="login-kakao-btn" onclick="location.href=''">카카오로 로그인하기</button>
-	<button id="login-id-btn" onclick="location.href='/auth/joinForm'">회원 가입하기</button>
+	<button id="login-id-submit">수정하기</button>
+
 </div>
 <script type="text/javascript" src="/js/main.js"></script>
 <%@ include file="../layout/footer.jsp"%>
