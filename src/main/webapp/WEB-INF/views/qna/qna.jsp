@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="../layout/header.jsp"%>
 <title>QnA</title>
-<div class="container">
+<body class="container">
 	<h2>고객센터 및 자주묻는 질문</h2>
 	<p>여행게시판 입니다.</p>
 	<table class="table table-hover">
@@ -33,6 +33,6 @@
 	<div class="pt-1 text-right">
 		<button class="btn btn btn-success" type="submit" style="width: 10%; padding: 5px;" onclick="location.href='/qna/Write' ">글작성</button>
 	</div>
-</div>
+</body>
 <script type="text/javascript" src="/js/main.js"></script>
 <%@ include file="../layout/footer.jsp"%>
