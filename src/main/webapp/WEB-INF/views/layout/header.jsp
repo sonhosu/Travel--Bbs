@@ -22,6 +22,13 @@
 <script src="https://kit.fontawesome.com/2d323a629b.js" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
 
 <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/reset.css">
@@ -44,14 +51,14 @@
 						<li class="dropdown"><a href="/board">여행 게시판</a></li>
 						<li class="dropdown"><a>여행정보</a></li>
 						<li class="dropdown"><a>지도 표기</a></li>
-						<li class="dropdown"><a>Q&A</a></li>
+						<li class="dropdown"><a href="/qna">Q&A</a></li>
 					</ul>
 
 					<!-- Icons -->
 					<ul class="navbar__icons">
 						<li class="dropdown"><a href="/auth/loginForm">로그인</a></li>
-						<li class="dropdown"><a>마이페이지</a></li>
-<!-- 						<li class="dropdown"><a>전체사용자정보</a></li> -->
+						<li class="dropdown"><a href="">마이페이지</a></li>
+						<!-- 						<li class="dropdown"><a>전체사용자정보</a></li> -->
 					</ul>
 					<!-- Toggle button -->
 					<a href="#" class="navbar__toggleBtn"> <span style="color: orange"><i class="fas fa-bars"></i></span>
