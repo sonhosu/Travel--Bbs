@@ -3,7 +3,7 @@
 <title>로그인</title>
 <body class="container">
 	<div id="login-form">
-		<form action="/auth/login" method="post">
+		<form action="/auth/login" method= "post">
 			<div class="login-id-label">아이디</div>
 			<input type="text" name="username" class="login-input-box" placeholder="ID 입력">
 			<div class="login-id-label">비밀번호</div>
