@@ -21,4 +21,10 @@ public class UserController {
 		return "user/loginForm";
 	}
 	
+	/*
+	 * //마이페이지
+	 * 
+	 * @GetMapping("/user/info") public String userInfo() { return"/user/myPage"; }
+	 */
+	
 }

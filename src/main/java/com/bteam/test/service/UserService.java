@@ -14,21 +14,26 @@ import java.util.Optional;
 @Service
 public class UserService {
 	private final UserRepository userRepository;
+	private final PasswordEncoder passwordencoder;
 	private static final String ADMIN_TOKEN = "AAABnv/xRVklrnYxKZ0aHgTBcXukeZygoC";
 
 	@Autowired
-	public UserService(UserRepository userRepository) {
+	public UserService(UserRepository userRepository, PasswordEncoder passwordencoder) {
 		this.userRepository = userRepository;
+		this.passwordencoder = passwordencoder;
+
 	}
 
 	public void registerUser(UserDto userdto) {
-		
+
 		UserRole role = UserRole.USER;
-		
+
 		String userid = userdto.getUserid();
-		String password = userdto.getPassword();
-		
-		System.out.print(userid+password+role);
+
+		// 비밀번호 해쉬화
+		String password = passwordencoder.encode(userdto.getPassword());
+
+		System.out.print(userid + password + role);
 		// 회원 ID 중복 확인
 		Optional<User> found = userRepository.findByuserid(userid);
 		if (found.isPresent()) {
@@ -36,9 +41,10 @@ public class UserService {
 		}
 
 		// 사용자 ROLE 확인
-		
-		User user = new User(userid,password,role);
-		System.out.print(userid+password+role);
+
+		User user = new User(userid, password, role);
+		System.out.print(userid + password + role);
 		userRepository.save(user);
 	}
+
 }
