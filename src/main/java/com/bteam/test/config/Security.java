@@ -32,7 +32,7 @@ public class Security extends WebSecurityConfigurerAdapter {
 		    	.formLogin()
 		    	.loginPage("/auth/loginForm") //인증이 되지않은 로그인은 이쪽으로 옴(커스터마이징)
 		    	.loginProcessingUrl("/auth/login")//스프링 시큐리티가 해당주소로 요청오는 로그인을 가로채서 대신 로그인
-		    	.defaultSuccessUrl("/"); //로그인이 끝나면 오는곳
+		    	.defaultSuccessUrl("/home"); //로그인이 끝나면 오는곳
 				
 
 	}

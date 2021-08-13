@@ -15,13 +15,25 @@ public class User {
 
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Id
-	private int Id;
+	private Long Id;
 	
 	@Column(nullable = false)
-	private String userid;
+	private String userId;
 	
 	@Column(nullable = false)
 	private String password;
+	
+	@Column(nullable= false)
+	private String name;
+	
+	@Column(nullable=false)
+	private String email;
+	
+	@Column(nullable=false)
+	private String phoneNumber;
+	
+	@Column(nullable=false)
+	private Long birth;
 	
 	@Column(nullable = false)
 	@Enumerated(value = EnumType.STRING)
@@ -29,14 +41,30 @@ public class User {
 	
 	
 	public User(UserDto userdto) {
-		this.userid=userdto.getUserid();
+		this.userId=userdto.getUserId();
 		this.password=userdto.getPassword();
+		this.name=userdto.getName();
+		this.email=userdto.getEmail();
+		this.phoneNumber=userdto.getPhoneNumber();
+		this.birth=userdto.getBirth();
+		
 		
 	}
-	public User(String userid, String password, UserRole role) {
-		this.userid=userid;
+	public User(String userId, String password, UserRole role ,String phoneNumber,String email,String name,Long birth ) {
+		this.userId=userId;
 		this.password=password;
+		this.name=name;
+		this.email=email;
+		this.phoneNumber=phoneNumber;
+		this.birth=birth;
 		this.role=role;
 	}
+	public  void update(UserModifyDto userModifyDto) {
+		this.userId=userModifyDto.getUserId();
+		this.password=userModifyDto.getPassword();
+		this.email=userModifyDto.getEmail();
+		this.phoneNumber=userModifyDto.getPhoneNumber();
+	}
+	
 	
 }

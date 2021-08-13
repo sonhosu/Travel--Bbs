@@ -30,7 +30,23 @@ public class UserDetailsImpl implements UserDetails {
 
     @Override
     public String getUsername() {
-        return user.getUserid();
+        return user.getName();
+    }
+
+    public String getUserid() {
+    	return user.getUserId();
+    }
+    
+    public String getEmail() {
+    	return user.getEmail();
+    }
+    
+    public Long getId() {
+    	return user.getId();
+    }
+    
+    public String getphoneNumber() {
+    	return user.getPhoneNumber();
     }
 
     //계정의 만료 여부

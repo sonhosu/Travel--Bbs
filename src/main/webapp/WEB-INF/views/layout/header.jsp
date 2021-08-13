@@ -1,11 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
 
 <sec:authorize access="isAuthenticated()">
 	<sec:authentication property="principal" var="principal" />
 	<script>
-		alert("로그인되었습니다..");
+		
 	</script>
 </sec:authorize>
 
@@ -48,32 +48,41 @@
 
 
 
-					<ul class="navbar__menu">
-						<li class="dropdown"><a href="/">메인</a></li>
-						<li class="dropdown"><a href="/board">여행 게시판</a></li>
-						<li class="dropdown"><a>여행정보</a></li>
-						<li class="dropdown"><a>지도 표기</a></li>
-						<li class="dropdown"><a href="/qna">Q&A</a></li>
-					</ul>
+
 
 					<!-- Icons -->
 					<ul class="navbar__icons">
 
 						<sec:authorize access="isAnonymous()">
+							<ul class="navbar__menu">
+								<li class="dropdown"><a href="/">메인</a></li>
+								<li class="dropdown"><a href="/board">여행 게시판</a></li>
+								<li class="dropdown"><a>여행정보</a></li>
+								<li class="dropdown"><a>지도 표기</a></li>
+								<li class="dropdown"><a href="/qna">Q&A</a></li>
+								<li class="dropdown"><a href="/auth/loginForm">로그인</a></li>
+							</ul>
 
-							<a href="/auth/loginForm">로그인</a>
 
 						</sec:authorize>
 
 						<sec:authorize access="isAuthenticated()">
-							<a>마이페이지</a>
-							<a href="/logout">로그아웃</a>
-
-						</sec:authorize>
+							<ul class="navbar__menu">
+								
+								<li class="dropdown">${username}님</li>
+								<li class="dropdown"><a href="/">메인</a></li>
+								<li class="dropdown"><a href="/board">여행 게시판</a></li>
+								<li class="dropdown"><a>여행정보</a></li>
+								<li class="dropdown"><a>지도 표기</a></li>
+								<li class="dropdown"><a href="/qna">Q&A</a></li>
+								<li class="dropdown"><a href="/user/mypage" id="mypage"> 마이페이지</a></li>
+								<li class="dropdown"><a href="/logout">로그아웃</a></li>
+						
 
 
 						<!--<li class="dropdown"><a>전체사용자정보</a></li> -->
 					</ul>
+					</sec:authorize>
 
 
 
