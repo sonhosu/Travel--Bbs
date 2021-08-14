@@ -3,7 +3,8 @@ package com.bteam.test.model;
 
 import javax.persistence.*;
 
-
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,6 +13,8 @@ import lombok.NoArgsConstructor;
 @Getter
 @Entity
 public class User {
+	
+	
 
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Id
@@ -50,6 +53,12 @@ public class User {
 		
 		
 	}
+	
+public  void update(UserModifyDto userModifyDto) {
+		
+		this.email=userModifyDto.getEmail();
+		this.phoneNumber=userModifyDto.getPhoneNumber();
+	}
 	public User(String userId, String password, UserRole role ,String phoneNumber,String email,String name,Long birth ) {
 		this.userId=userId;
 		this.password=password;
@@ -59,12 +68,14 @@ public class User {
 		this.birth=birth;
 		this.role=role;
 	}
-	public  void update(UserModifyDto userModifyDto) {
-		this.userId=userModifyDto.getUserId();
-		this.password=userModifyDto.getPassword();
-		this.email=userModifyDto.getEmail();
-		this.phoneNumber=userModifyDto.getPhoneNumber();
+	
+
+public User(String password ,String phoneNumber,String email) {
+		this.password=password;
+		this.phoneNumber=phoneNumber;
+		this.email=email;
 	}
+	
 	
 	
 }

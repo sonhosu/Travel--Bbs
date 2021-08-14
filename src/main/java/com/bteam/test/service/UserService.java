@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import com.bteam.test.repository.UserRepository;
 import com.bteam.test.model.User;
 import com.bteam.test.model.UserDto;
+import com.bteam.test.model.UserModifyDto;
 import com.bteam.test.model.UserRole;
 
 import java.util.Optional;
@@ -55,5 +56,7 @@ public class UserService {
 		System.out.print(userId + password + role);
 		userRepository.save(user);
 	}
+	
+
 
 }

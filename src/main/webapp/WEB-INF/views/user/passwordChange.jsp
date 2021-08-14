@@ -4,19 +4,24 @@
 <body class="container">
 	<div id="login-form">
 		<form action="/  " method="post">
-			<div class="login-id-label">아이디</div>
-			<input type="text" name="userid"  id="modify-id" value="${userid }"class="login-input-box"  disabled>
-			<div class="login-id-label">이름</div>
-			<input type="text" name="name"  id="modify-name" value="${username}"class="login-input-box" disabled>
-			<div class="login-id-label">이메일</div>		
-			<input type="text" name="email"  id="modify-email" value="${email}"class="login-input-box" >			
-			<div class="login-id-label">전화번호</div>
-			<input type="text" name="modify-phonenumber"  id="modify-phonenumber" value="${phonenumber}"class="login-input-box" >
+			
+			<div class="login-id-label">비밀번호</div>		
+			<input type="password" name="password"  id="password" class="login-input-box"  >			
+			<div class="login-id-label">비밀번호 확인</div>
+			<input type="password" name="password"  id="password-check" class="login-input-box" >
 		</form>
-		<button id="userinfo-modify-btn">수정하기</button>
+		<button id="user-pwModify-btn">수정하기</button>
 	</div>
 </body>
 <script>
+let pw=$("#password").val();
+let pwc=$("#password-check").val();
+ console.log(pw)
+  console.log(pwc)
+
+
+
+
 $("#userinfo-modify-btn").click(function() {
 	console.log("werwer");
 	let data = {

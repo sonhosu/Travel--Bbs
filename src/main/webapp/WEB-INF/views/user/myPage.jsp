@@ -7,7 +7,8 @@
 			<div> my정보</div>
 			<li>
 				<ul>
-				<a>내정보 확인/수정</a>
+					<a href="/user/myPageModify">내정보 확인/수정</a>
+					<a href="/user/password">비밀번호 변경</a>
 				</ul>
 			</li>
 		</div>
@@ -15,7 +16,7 @@
 			<div>my여행</div>
 			<li>
 				<ul>
-				<a>찜목록</a>
+					<a>찜목록</a>
 				</ul>
 			</li>
 		</div>

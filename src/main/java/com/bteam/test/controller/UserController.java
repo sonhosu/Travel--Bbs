@@ -24,6 +24,7 @@ public class UserController {
 		return "user/loginForm";
 	}
 
+	// 마이페이지
 	@GetMapping("/user/mypage")
 	public String userInfo(Model model, @AuthenticationPrincipal UserDetailsImpl userDetails) {
 		model.addAttribute("username", userDetails.getUsername());
@@ -31,7 +32,25 @@ public class UserController {
 		model.addAttribute("userid", userDetails.getUserid());
 		model.addAttribute("email", userDetails.getEmail());
 		model.addAttribute("phonenumber", userDetails.getphoneNumber());
+		model.addAttribute("id",userDetails.getId());
 
 		return "/user/myPage";
 	}
+	//유저정보 수정 페이지
+	@GetMapping("/user/myPageModify")
+	public String myPageModify(Model model, @AuthenticationPrincipal UserDetailsImpl userDetails) {
+		model.addAttribute("username", userDetails.getUsername());
+		model.addAttribute("password", userDetails.getPassword());
+		model.addAttribute("userid", userDetails.getUserid());
+		model.addAttribute("email", userDetails.getEmail());
+		model.addAttribute("phonenumber", userDetails.getphoneNumber());
+		model.addAttribute("id",userDetails.getId());
+		return "/user/myPageModify";
+	}
+	
+	@GetMapping("/user/password")
+	public String userPassword() {
+		return "/user/passwordChange";
+	}
+	
 }

@@ -33,18 +33,12 @@ public class UserMainController {
 		return userRepository.findAll();
 	}
 
-	/*
-	 * @GetMapping("user/mypage/{userid}") public Optional<User>
-	 * userinfo(@PathVariable String userid) {
-	 * 
-	 * return userRepository.findByuserid(userid); }
-	 */
 
 	// 회원 수정
-	@PutMapping("/userinfo/modify{id}")
-	public Long userModify(@PathVariable Long id, @PathVariable UserModifyDto userModifyDto) {
-
-		return userModifyService.update(id, userModifyDto);
+	@PutMapping("/userinfo/modify/{id}")
+	public String userModify(@PathVariable Long id, @RequestBody UserModifyDto userModifyDto) {
+		userModifyService.update(id, userModifyDto);
+		return "redirect:/";
 	}
 
 	// 회원가입 요청 처리
