@@ -5,9 +5,9 @@
 	<div id="login-form">
 		<form action="/auth/login" method= "post">
 			<div class="login-id-label">아이디</div>
-			<input type="text" name="username" class="login-input-box" placeholder="ID 입력">
+			<input type="text" name="username" class="login-input-box" placeholder="ID 입력" value="1">
 			<div class="login-id-label">비밀번호</div>
-			<input type="password" name="password" class="login-input-box" placeholder="PW 입력">
+			<input type="password" name="password" class="login-input-box" placeholder="PW 입력" value="1">
 			<button id="login-id-submit" >로그인</button>
 		</form>
 		
